@@ -12,7 +12,7 @@ Clears textbox and textarea fields on click
 
 ### Tested
 
-* IE7, IE8, Chrome 10, FF3, Safari 3.2 Windows, Opera 11
+* IE7, IE8, Chrome 19, FF12, Safari 5.1.2 Windows, Opera 11.64
 
 
 ### How to Use
