@@ -15,7 +15,7 @@ Clears textbox and textarea fields on click
 * IE7, IE8, Chrome 10, FF3, Safari 3.2 Windows, Opera 11
 
 
-### Usage
+### How to Use
 
 On your head add path to jquery and clearme. You may need to change the paths depending on your folder structure.
 ```
@@ -46,3 +46,8 @@ And clearme is now ready for use inside jquery document ready.
 </body>
 </html>
 ```
+
+### Links
+
+* [Download Source Files with Examples](https://github.com/nicnacks/clearme/zipball/master)
+* [Plugin Site](http://nicnacks.github.com/clearme)
