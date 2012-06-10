@@ -23,20 +23,20 @@
 			return this.each(function() {
 				var field = $(this);//jquery object of our select element
 				
-				if(field.is('input[type=text]') && field.is('textarea')){//check if its the correct element
+				if(field.is('input[type=text]') || field.is('textarea')){//check if its the correct element
 					
 					if(options.autocomplete==false){
 						field.attr('autocomplete','off'); //prevent previous form values to appear on page refresh in Firefox
 					}
-					
+					field.addClass('uncleared');
 					field.focus(function(){
 						if(!$(this).data('cleared')){
 							$(this).data('value', $(this).val());
-							$(this).data('cleared', true).val('');
+							$(this).data('cleared', true).val('').removeClass('uncleared').addClass('cleared');
 						}
 					}).blur(function(){
 						if($.trim($(this).val())=='' && options.restoreValue){//treat spaces only as blanks too
-							$(this).data('cleared', false).val($(this).data('value'));
+							$(this).data('cleared', false).val($(this).data('value')).removeClass('cleared').addClass('uncleared');
 						}
 					});	
 				}

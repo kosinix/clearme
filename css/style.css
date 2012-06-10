@@ -38,7 +38,11 @@ pre, code, tt {font:1em 'andale mono', 'lucida console', monospace;line-height:1
 
 
 /* Page Structure */
-#wrapper{ margin:0 auto; text-align:left; width:960px; }
+#wrapper{
+	margin:0 auto;
+	text-align:left;
+	width:960px;
+}
 
 
 /* Sample Page Styling */
@@ -52,4 +56,39 @@ h1{
 .entry-example{
 	margin-bottom:50px;
 }
-pre{ padding:10px; background: #F2F2F2;}
+pre{
+	padding:10px;
+	background: #F2F2F2;
+}
+input[type=text].uncleared,
+textarea.uncleared{
+	color:#a4a4a4;
+}
+input[type=text],
+textarea{
+	color:#000;
+	min-width:300px;
+	height:100px;
+	font-family:Arial;
+	font-size:12px;
+	border:1px solid #cacaca;
+	padding:10px;
+	background: #e2e2e2;
+	-moz-border-radius:3px; /* Firefox */
+	-webkit-border-radius:3px; /* Safari and chrome */
+	border-radius:3px; /* CSS3 */
+	background: #f2f2f2;
+	background: -moz-linear-gradient(top,  #f2f2f2 0%, #ffffff 19%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(19%,#ffffff));
+	background: -webkit-linear-gradient(top,  #f2f2f2 0%,#ffffff 19%);
+	background: -o-linear-gradient(top,  #f2f2f2 0%,#ffffff 19%);
+	background: -ms-linear-gradient(top,  #f2f2f2 0%,#ffffff 19%);
+	background: linear-gradient(top,  #f2f2f2 0%,#ffffff 19%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#ffffff',GradientType=0 );
+}
+input[type=text]{
+	width:200px;
+	padding:0 10px;
+	height:30px;
+	line-height:30px;
+}
