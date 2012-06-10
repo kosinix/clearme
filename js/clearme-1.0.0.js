@@ -16,7 +16,9 @@
 			//Settings list and the default values
 			var defaults = {
 				autocomplete:false,//disable firefox default behavior of preserving initial values on refresh
-				restoreValue:true//restores initial value of the field when it loses focus and value is empty
+				restoreValue:true,//restores initial value of the field when it loses focus and value is empty
+				classUncleared: 'uncleared',//css class when field has not been cleared yet
+				classCleared: 'cleared'//css class when field has been cleared
 			};
 			options = $.extend(true, {}, defaults, options);
 			
@@ -28,15 +30,15 @@
 					if(options.autocomplete==false){
 						field.attr('autocomplete','off'); //prevent previous form values to appear on page refresh in Firefox
 					}
-					field.addClass('uncleared');
+					field.addClass(options.classUncleared);
 					field.focus(function(){
 						if(!$(this).data('cleared')){
 							$(this).data('value', $(this).val());
-							$(this).data('cleared', true).val('').removeClass('uncleared').addClass('cleared');
+							$(this).data('cleared', true).val('').removeClass(options.classUncleared).addClass(options.classCleared);
 						}
 					}).blur(function(){
 						if($.trim($(this).val())=='' && options.restoreValue){//treat spaces only as blanks too
-							$(this).data('cleared', false).val($(this).data('value')).removeClass('cleared').addClass('uncleared');
+							$(this).data('cleared', false).val($(this).data('value')).removeClass(options.classCleared).addClass(options.classUncleared);
 						}
 					});	
 				}
