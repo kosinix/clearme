@@ -1,5 +1,5 @@
 /*
- * Clearme jQuery Plugin 1.0.6
+ * Clearme jQuery Plugin 1.0.0
  * https://github.com/nicnacks
  * Clears textbox and textarea fields on click
  * Features: Clears field on focus and returns the initial value if it loses focus and value of the field is empty blank. Can be set to clear field on first click and remain blank after losing focus.
