@@ -3,7 +3,7 @@
  * https://github.com/nicnacks
  * Clears textbox and textarea fields on click
  * Features: Clears field on focus and returns the initial value if it loses focus and value of the field is empty blank. Can be set to clear field on first click and remain blank after losing focus.
- * Tested: IE7, IE8, Chrome 10, FF3, Safari 3.2 windows, Opera 11
+ * Tested: IE7, IE8, Chrome 19, FF12, Safari 5.1.2 Windows, Opera 11.64
  * 
  * Copyright 2012, Nico Amarilla
  * Dual licensed under the MIT or GPL Version 2 licenses.
