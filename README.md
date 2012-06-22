@@ -22,10 +22,19 @@ On your head add path to jquery and clearme. You may need to change the paths de
 <html>
 <head>
 	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-	<script type="text/javascript" src="js/clearme-1.0.0.js"></script>
+	<script type="text/javascript" src="js/clearme-1.0.1.js"></script>
 </head>
 <body>
 ...
+</body>
+</html>
+```
+
+HTML markup requirements should be a field of type text or email or a textarea with a title attribute for the watermark text.
+```
+<html>
+<body>
+	<input type="text" title="Watermark text to display when field is empty" />
 </body>
 </html>
 ```
