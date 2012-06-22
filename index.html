@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Clearme by nicnacks</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Clearme</h1>
+        <p>jQuery plugin that clears textbox and textarea fields on click</p>
+
+        <p class="view"><a href="https://github.com/nicnacks/clearme">View the Project on GitHub <small>nicnacks/clearme</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/nicnacks/clearme/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/nicnacks/clearme/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/nicnacks/clearme">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>jQuery Clearme Plugin</h1>
+
+<p>Clearme is an easy to use jQuery plugin that clears textbox and textarea fields on click. It is very useful in  web forms.</p>
+
+<h3>Features</h3>
+
+<ul>
+<li>Clears field on focus and returns the initial value if it loses focus and if field is empty. </li>
+<li>Can be set to clear the field once on first click and remain blank after losing focus. </li>
+<li>Automatically add css class uncleared and cleared to field so you can give different styles depending on field status. Class names changeable via plugin options.</li>
+<li>Turns off firefox autocomplete by default. This prevents problem with initial values on page refresh. Can be set to false.</li>
+<li>Small file size at less than 2KB</li>
+<li>Its FREE!</li>
+</ul><h3>Tested</h3>
+
+<ul>
+<li>IE7, IE8, Chrome 10, FF3, Safari 3.2 Windows, Opera 11</li>
+</ul><h3>Links</h3>
+
+<ul>
+<li><a href="https://github.com/nicnacks/clearme/zipball/master">Download Source Files with Examples</a></li>
+</ul><h3>How to Use</h3>
+
+<p>On your head add path to jquery and clearme. You may need to change the paths depending on your folder structure.</p>
+
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;script type="text/javascript" src="js/jquery-1.7.1.min.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="js/clearme-1.0.1.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+...
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>HTML markup requirements should be a field of type text or email or a textarea with a title attribute for the watermark text.</p>
+
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+    &lt;input type="text" title="Watermark text to display when field is empty" /&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>And clearme is now ready for use inside jquery document ready.</p>
+
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+    ...
+    &lt;script type="text/javascript"&gt;
+        jQuery.ready(function($){
+            $('input[type=text]').clearme();
+        });
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+...
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/nicnacks">nicnacks</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
