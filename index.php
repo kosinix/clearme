@@ -31,7 +31,8 @@
 <body>
 	<div id="wrapper">
 		<h1>jQuery Clearme Plugin</h1>
-		<h2>Simple Markup Requirements</h2>
+		<h2>PHP version to demonstrate fields on form submission</h2>
+		<h3>Markup requirements</h3>
 		<ul>
 			<li>Field should be of type text or email or a textarea</li>
 			<li>Field should have a title attribute for the watermark text.</li>
@@ -43,7 +44,7 @@
 				<h2>Example 1 - Default</h2>
 				<pre>$('#example-1').clearme();</pre>
 				<label for="example-1">First Name:</label>
-				<input type="text" name="name" id="example-1" value="" title="Your name please..." />
+				<input type="text" name="name" id="example-1" value="<?php echo $_POST['name']; ?>" title="Your name please..." />
 			</div>
 			
 			<div class="entry-example">
@@ -53,7 +54,7 @@
 	restoreValue:false
 });</pre>
 				<label for="example-2">Email:</label>
-				<input type="text" name="email" id="example-2" title="johndoe@email.com" value="" title="Your email please..." />
+				<input type="text" name="email" id="example-2" title="johndoe@email.com" value="<?php echo $_POST['email']; ?>" title="Your email please..." />
 			</div>
 			
 			<div class="entry-example">
@@ -63,7 +64,7 @@
 	autocomplete:true
 });</pre>
 				<label for="example-3">Last Name:</label>
-				<input type="text" name="last_name" id="example-3" title="John Doe" value="" title="Your last name please..." />
+				<input type="text" name="last_name" id="example-3" title="John Doe" value="<?php echo $_POST['last_name']; ?>" title="Your last name please..." />
 			</div>
 			
 			<div class="entry-example">
@@ -71,7 +72,7 @@
 				<p>Also applies to textareas</p>
 				<pre>$('textarea').clearme();</pre>
 				<label for="example-4">Message:</label><br />
-				<textarea name="message" id="message" title="Your message here..." cols="30" rows="10"></textarea>
+				<textarea name="message" id="message" title="Your message here..." cols="30" rows="10"><?php echo $_POST['message'];?></textarea>
 			</div>
 			<input type="submit" />
 		</form>
