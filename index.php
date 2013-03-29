@@ -7,8 +7,8 @@
 	<meta name="keywords" content="jQuery Clearme Plugin" />
 	<link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
 	
-	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-	<script type="text/javascript" src="js/clearme-1.0.1.js"></script>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/clearme.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function(){
 		//example 1
