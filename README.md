@@ -21,8 +21,8 @@ On your head add path to jquery and clearme. You may need to change the paths de
 ```
 <html>
 <head>
-	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-	<script type="text/javascript" src="js/clearme-1.0.1.js"></script>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/clearme.min.js"></script>
 </head>
 <body>
 ...
@@ -30,11 +30,11 @@ On your head add path to jquery and clearme. You may need to change the paths de
 </html>
 ```
 
-HTML markup requirements should be a field of type text or email or a textarea with a title attribute for the watermark text.
+HTML markup requirements should be an input or a textarea element with a title attribute containing the watermark text. Input can be of type text, email, tel, url, search or number.
 ```
 <html>
 <body>
-	<input type="text" title="Watermark text to display when field is empty" />
+	<input class="clearme" type="text" title="Watermark text to display when field is empty" />
 </body>
 </html>
 ```
@@ -46,7 +46,7 @@ And clearme is now ready for use inside jquery document ready.
 	...
 	<script type="text/javascript">
 		jQuery.ready(function($){
-			$('input[type=text]').clearme();
+			$('.clearme').clearme();
 		});
 	</script>
 </head>
@@ -58,5 +58,5 @@ And clearme is now ready for use inside jquery document ready.
 
 ### Links
 
-* [Download Source Files with Examples](https://github.com/nicnacks/clearme/zipball/master)
-* [Plugin Site](http://nicnacks.github.com/clearme)
+* [Download Source Files with Examples](https://github.com/kosinix/clearme/zipball/master)
+* [Plugin Site](http://kosinix.github.com/clearme)
