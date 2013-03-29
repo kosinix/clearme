@@ -23,7 +23,8 @@
             options = $.extend(true, {}, defaults, options);
             
             return this.each(function() {
-                var field = $(this);//jquery object of our select element
+                var field = $(this),
+                    value = '';//jquery object of our select element
                 
                 if(field.is('input[type=text]') || field.is('input[type=email]') || field.is('input[type=tel]') || field.is('input[type=url]') || field.is('input[type=search]') || field.is('input[type=number]') || field.is('textarea')){//check if its the correct element
                     
@@ -31,24 +32,27 @@
                         field.attr('autocomplete','off'); //prevent previous form values to appear on page refresh in Firefox
                     }
                     
+                    //assign value and trim whitespaces
+                    value = $.trim(field.val());
+                    
                     //init field
-                    if($.trim(field.val())==''){//input empty = yes
-                        _unClearMe(field, options);
-                    } else { //input empty = no. clearflag = yes
-                        field.data('clearme.cleared', true).removeClass(options.classUncleared).addClass(options.classCleared);
+                    if(value==''){//input empty = yes
+                        _unClearMe(field, options, field.attr('title'));
+                    } else { //input empty = no. clearflag = yes, preserve value
+                        _clearMe(field, options, value);
                     }
                     //events callbacks
                     field.focus(function(){
                         if($.trim(field.val())!=''){//input empty = no
                             if(!field.data('clearme.cleared')){//clearflag = no
-                                _clearMe(field, options);
+                                _clearMe(field, options, '');
                             }
                         }
                         
                     }).blur(function(){
                         if($.trim(field.val())==''){//input empty = yes
                             if(options.restoreValue){//restoreflag = yes
-                                _unClearMe(field, options);
+                                _unClearMe(field, options, field.attr('title'));
                             }
                         }
                     });
@@ -78,10 +82,10 @@
         return false;
     }
     /*** Private Functions Here***/
-    function _clearMe(field, options){
-        field.data('clearme.cleared', true).val('').removeClass(options.classUncleared).addClass(options.classCleared);
+    function _clearMe(field, options, value){
+        field.data('clearme.cleared', true).val(value).removeClass(options.classUncleared).addClass(options.classCleared);
     }
-    function _unClearMe(field, options){
-        field.data('clearme.cleared', false).val(field.attr('title')).removeClass(options.classCleared).addClass(options.classUncleared);//add watermark texts
+    function _unClearMe(field, options, value){
+        field.data('clearme.cleared', false).val(value).removeClass(options.classCleared).addClass(options.classUncleared);//add watermark texts
     }
 })(jQuery);
