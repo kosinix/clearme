@@ -1,9 +1,7 @@
 /*
- * Clearme jQuery Plugin 1.2.0
+ * Clearme jQuery Plugin 1.2.1
  * https://github.com/kosinix/clearme
- * Clears input (text, email, tel, url, search, number) and textarea fields on click
- * Features: Clears field on focus and returns the initial value if it loses focus and value of the field is empty blank. Can be set to clear field on first click and remain blank after losing focus. Upon form submission, the fields that are empty are cleared of the watermark text.
- * Tested: IE7, IE8, Chrome 19, FF12, Safari 5.1.2 Windows, Opera 11.64
+ * jQuery plugin that clears a watermark text on an input (text, email, tel, url, search, number) or textarea fields on click
  * 
  * Copyright 2012, Nico Amarilla
  * Dual licensed under the MIT or GPL Version 2 licenses.

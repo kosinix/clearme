@@ -1,0 +1,39 @@
+{
+    "name": "clearme",
+    "title": "jQuery Clearme",
+    "description": "jQuery plugin that clears a watermark text on click. Can be used on input (text, email, tel, url, search, number) or textarea fields.",
+    "keywords": [
+        "clear",
+        "text",
+        "form"
+    ],
+    "version": "1.2.1",
+    "author": {
+        "name": "Nico Amarilla",
+        "url": "https://github.com/kosinix/"
+    },
+    "maintainers": [
+        {
+            "name": "Nico Amarilla",
+            "email": "kosinix@codefleet.net",
+            "url": "https://github.com/kosinix/"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://www.opensource.org/licenses/mit-license.php"
+        },
+        {
+            "type": "GPL",
+            "url": "http://www.gnu.org/licenses/gpl.html"
+        }
+    ],
+    "bugs": "https://github.com/kosinix/clearme/issues",
+    "homepage": "https://github.com/kosinix/clearme",
+    "docs": "https://github.com/kosinix/clearme",
+    "download": "https://github.com/kosinix/clearme/archive/master.zip",
+    "dependencies": {
+        "jquery": ">=1.7"
+    }
+}

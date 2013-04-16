@@ -1,7 +1,7 @@
 jQuery Clearme Plugin
 ===================
 
-Clears textbox and textarea fields on click
+jQuery plugin that clears a watermark text on click. Can be used on input (text, email, tel, url, search, number) or textarea fields.
 
 ### Features
 
@@ -55,6 +55,11 @@ And clearme is now ready for use inside jquery document ready.
 </body>
 </html>
 ```
+
+### License
+
+* MIT or GPL2
+
 
 ### Links
 
