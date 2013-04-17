@@ -1,5 +1,5 @@
 /*
- * Clearme jQuery Plugin 1.2.1
+ * Clearme jQuery Plugin 1.2.2
  * https://github.com/kosinix/clearme
  * jQuery plugin that clears a watermark text on an input (text, email, tel, url, search, number) or textarea fields on click
  * 
@@ -58,7 +58,7 @@
                     field.parents('form').submit(function(){
                         $(this).find('input.uncleared,textarea.uncleared').each(function(){
                             if($(this).data('clearme.cleared')==false){
-                                $(this).val('');
+                                _clearMe(field, options, '');
                             }
                         });
                     })
