@@ -1,5 +1,5 @@
 /*
- * Clearme jQuery Plugin 1.2.2
+ * Clearme jQuery Plugin 1.2.3
  * https://github.com/kosinix/clearme
  * jQuery plugin that clears a watermark text on an input (text, email, tel, url, search, number) or textarea fields on click
  * 
@@ -24,7 +24,7 @@
                 var field = $(this),
                     value = '';//jquery object of our select element
                 
-                if(field.is('input[type=text]') || field.is('input[type=email]') || field.is('input[type=tel]') || field.is('input[type=url]') || field.is('input[type=search]') || field.is('input[type=number]') || field.is('textarea')){//check if its the correct element
+                if(field.is('input[type=text]') || field.is('input[type=password]') || field.is('input[type=email]') || field.is('input[type=tel]') || field.is('input[type=url]') || field.is('input[type=search]') || field.is('input[type=number]') || field.is('textarea')){//check if its the correct element
                     
                     if(options.autocomplete==false){
                         field.attr('autocomplete','off'); //prevent previous form values to appear on page refresh in Firefox
